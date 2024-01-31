@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import left_corner from './assets/left_corner.png'
 import right_corner from './assets/right_corner.png'
 import top_center from './assets/border_top_center.png'
+import small_button from './assets/small_button.png'
+import large_button from './assets/large_button.png'
 import './App.css'
 
 function App() {
@@ -34,10 +36,35 @@ function App() {
     </div>
     <img src={top_center} alt="" width={60} className='fixed right-[50%] [transform:translate(+30px,0%)] top-0' />
 
-    <div className="p-16">
-      {paragraphs.map((p)=>{
-        return <p>{p}</p>
-        })}
+    <div className="p-16 bg-[url('./assets/background.png')] bg-cover bg-center h-screen flex flex-col  items-end justify-center space-x-4 space-y-4 ">
+        <div className='w-32'>
+          <img src={small_button} alt=""  className='' />
+        </div>
+        <div className='w-32'>
+          <img src={small_button} alt=""  className='' />
+        </div>
+        <div className='w-32'>
+          <img src={small_button} alt=""  className='' />
+        </div>
+        <div className='w-32'>
+          <img src={small_button} alt=""  className='' />
+        </div>
+
+
+    </div>
+    <div className="p-16 bg-[#58646B] h-screen flex flex-row justify-center space-x-4 md:justify-around flex-wrap">
+        <div className='w-32 ml-4 sm:ml-0'>
+          <img src={large_button} alt=""  className='' />
+        </div>
+        <div className='w-32'>
+          <img src={large_button} alt=""  className='' />
+        </div>
+        <div className='w-32'>
+          <img src={large_button} alt=""  className='' />
+        </div>
+        <div className='w-32'>
+          <img src={large_button} alt=""  className='' />
+        </div>
     </div>
 
     </>
